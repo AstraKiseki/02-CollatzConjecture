@@ -15,21 +15,18 @@ namespace CollatzConjecture
                 try
                 {
                     Console.WriteLine(prompt);
-
                     string input = Console.ReadLine();
-
                     int x = int.Parse(input);
-
                     return x;
                 }
                 catch (Exception e)
                 {
-                    Console.WriteLine("Please enter an integer.  Jerk.");
+                    Console.WriteLine("Please enter an integer.");
                 }
             }
         }
 
-       static void Main(string[] args)
+        static void Main(string[] args)
         {
             int startingNumber = GetIntegerFromUser("Please enter a number.");
             int LoopCycle = 0;
@@ -60,13 +57,10 @@ namespace CollatzConjecture
                     }
                     LoopCycle += 1;
                 }
-
-         
-                    
             }
             Console.WriteLine("It takes {0} steps to reach 1 from {1}.", LoopCycle, startingNumber);
             Console.WriteLine("The value reaches its peak of {0} at step {1}.", largest, largeCycle); // Max and Cycle
             Console.ReadKey();
         }
-        }
+    }
 }
